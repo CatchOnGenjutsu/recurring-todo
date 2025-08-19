@@ -41,13 +41,13 @@ const FormField = <T extends FieldValues>({
 export default FormField;
 
 const styles = StyleSheet.create({
+  errorText: {
+    color: COLORS.error,
+  },
   input: {
     borderWidth: 1,
     marginBottom: 4,
     padding: 10,
   },
   inputBlock: { marginBottom: 10 },
-  errorText: {
-    color: COLORS.errorText,
-  },
 });

@@ -14,6 +14,7 @@ import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
 
 import FormField from '../components/FormField/FormField';
+import { COLORS } from '../const/colors';
 
 type Task = {
   id: string;
@@ -115,54 +116,54 @@ const HomeScreen = () => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
+  button: {
+    alignItems: 'center',
+    backgroundColor: COLORS.secondary,
+    borderRadius: 4,
+    elevation: 3,
+    justifyContent: 'center',
+    paddingVertical: 12,
+  },
+  buttonText: {
+    color: COLORS.buttonText,
+    fontSize: 16,
+    fontWeight: 'bold',
+    letterSpacing: 0.25,
+    lineHeight: 21,
+  },
+  completed: {
+    color: COLORS.textSecondary,
+    textDecorationLine: 'line-through',
+  },
   container: {
+    backgroundColor: COLORS.background,
     flex: 1,
     padding: 20,
     paddingTop: 50,
-    backgroundColor: '#fff',
   },
   header: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
   },
+  modalContainer: {
+    backgroundColor: COLORS.background,
+    borderRadius: 10,
+    padding: 20,
+    width: '80%',
+  },
+  modalOverlay: {
+    alignItems: 'center',
+    backgroundColor: COLORS.overlay,
+    flex: 1,
+    justifyContent: 'center',
+  },
   task: {
-    padding: 15,
+    borderBottomColor: COLORS.border,
     borderBottomWidth: 1,
-    borderBottomColor: '#ddd',
+    padding: 15,
   },
   taskText: {
     fontSize: 18,
-  },
-  completed: {
-    textDecorationLine: 'line-through',
-    color: 'gray',
-  },
-  button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'black',
-  },
-  buttonText: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: 'white',
-  },
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  modalContainer: {
-    width: '80%',
-    padding: 20,
-    backgroundColor: '#fff',
-    borderRadius: 10,
   },
 });
