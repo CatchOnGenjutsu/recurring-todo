@@ -1,24 +1,11 @@
-import React from "react";
+import { useEffect } from 'react';
 import {
   Control,
   FieldValues,
   UseFormGetValues,
   UseFormTrigger,
   ValidationValueMessage,
-} from "react-hook-form";
-// import { GroupBase } from 'react-select';
-// import { Props as SelectProps } from 'react-select/dist/declarations/src';
-
-// export interface SelectWithSmartSearchProps
-//   extends SelectProps<
-//     OptionTypeInterface,
-//     boolean,
-//     GroupBase<OptionTypeInterface>
-//   > {
-//   options: OptionTypeInterface[];
-//   valueLength?: number;
-//   findOrder?: 'any' | 'start';
-// }
+} from 'react-hook-form';
 
 export interface FormFieldInterface<T extends FieldValues> {
   field: FieldConfigInterface;
@@ -38,16 +25,16 @@ export interface FieldConfigInterface {
   id: string;
   label?: string;
   type:
-    | "text"
-    | "select"
-    | "selectWithSmartSearch"
-    | "date"
-    | "time"
-    | "password"
-    | "textarea"
-    | "multiSelect"
-    | "checkbox"
-    | "button";
+    | 'text'
+    | 'select'
+    | 'selectWithSmartSearch'
+    | 'date'
+    | 'time'
+    | 'password'
+    | 'textarea'
+    | 'multiSelect'
+    | 'checkbox'
+    | 'button';
   isRequired?: boolean;
   validation?: (getValues: any, trigger?: any) => ValidationRules;
   handleValue?: (value: string) => number | string | null;
@@ -65,7 +52,7 @@ export interface FieldConfigInterface {
   dividedPosition?: number;
   isModifyOptions?: boolean;
   valueLength?: number;
-  findOrder?: "any" | "start";
+  findOrder?: 'any' | 'start';
   noOptionsMessage?: () => string;
 }
 

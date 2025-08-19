@@ -1,9 +1,11 @@
-import { SafeAreaView, StyleSheet, View, StatusBar } from "react-native";
-import HomeScreen from "./src/screens/HomeScreen";
+import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
+import HomeScreen from './src/screens/HomeScreen';
+
+import { COLORS } from './src/const/colors';
 
 export default function App() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+    <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
       <HomeScreen />
     </SafeAreaView>
@@ -12,9 +14,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: COLORS.background,
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
