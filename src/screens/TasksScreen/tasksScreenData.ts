@@ -13,9 +13,30 @@ export const formFieldSettings: FieldConfigInterface = {
 };
 
 export const mockTasksData: Task[] = [
-  { id: '1', title: 'Купить быстро', completed: false },
-  { id: '2', title: 'Сделать зарядку', completed: false },
-  { id: '3', title: 'Почитать 20 минут', completed: false },
+  {
+    id: 1,
+    title: 'Купить быстро',
+    isCompleted: false,
+    dueDate: new Date(),
+    createdAt: null,
+    repeatType: 'daily',
+  },
+  {
+    id: 2,
+    title: 'Сделать зарядку',
+    isCompleted: false,
+    dueDate: new Date(),
+    createdAt: null,
+    repeatType: 'daily',
+  },
+  {
+    id: 3,
+    title: 'Почитать 20 минут',
+    isCompleted: false,
+    dueDate: new Date(),
+    createdAt: null,
+    repeatType: 'daily',
+  },
 ];
 
 export const buttonStyles = StyleSheet.create({

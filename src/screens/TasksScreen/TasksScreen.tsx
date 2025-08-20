@@ -40,10 +40,10 @@ const HomeScreen = () => {
       ),
     });
 
-  const toggleTask = (id: string) => {
+  const toggleTask = (id: number) => {
     setTasks((prev) =>
       prev.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task,
+        task.id === id ? { ...task, isCompleted: !task.isCompleted } : task,
       ),
     );
   };
@@ -52,9 +52,12 @@ const HomeScreen = () => {
     setTasks((prev) => [
       ...prev,
       {
-        id: (parseInt(prev.at(-1)!.id) + 1).toString(),
+        id: prev.at(-1)!.id + 1,
         title: data.newTask,
-        completed: false,
+        isCompleted: false,
+        dueDate: new Date(),
+        createdAt: new Date(),
+        repeatType: 'daily',
       },
     ]);
     reset();
@@ -68,7 +71,7 @@ const HomeScreen = () => {
 
         <FlatList
           data={tasks}
-          keyExtractor={(item) => item.id}
+          keyExtractor={(item, index) => item.id + index.toString()}
           renderItem={({ item }) => (
             <TaskItem item={item} toggleTask={toggleTask} />
           )}

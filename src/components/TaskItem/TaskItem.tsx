@@ -6,7 +6,7 @@ import { COLORS } from '../../const/colors';
 const TaskItem = ({ item, toggleTask }: TaskItemPropsInterface) => {
   return (
     <TouchableOpacity onPress={() => toggleTask(item.id)} style={styles.task}>
-      <Text style={[styles.taskText, item.completed && styles.completed]}>
+      <Text style={[styles.taskText, item.isCompleted && styles.completed]}>
         {item.title}
       </Text>
     </TouchableOpacity>
