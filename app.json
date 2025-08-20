@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "recurring-todo",
-    "slug": "recurring-todo",
+    "name": "Do it!",
+    "slug": "do-it",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/main-logo-icon.png",

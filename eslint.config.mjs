@@ -69,6 +69,7 @@ export default defineConfig([
         'error',
         { argsIgnorePattern: '^_' },
       ],
+      'react-native/sort-styles': 'off',
     },
   },
 ]);

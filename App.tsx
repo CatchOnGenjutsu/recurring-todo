@@ -1,20 +1,13 @@
-import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
-import HomeScreen from './src/screens/HomeScreen';
+import { StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 
-import { COLORS } from './src/const/colors';
+import DrawerNavigator from './src/components/DrawerNavigator/DrawerNavigator';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <NavigationContainer>
       <StatusBar barStyle="dark-content" />
-      <HomeScreen />
-    </SafeAreaView>
+      <DrawerNavigator />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: COLORS.background,
-    flex: 1,
-  },
-});
